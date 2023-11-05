@@ -84,6 +84,9 @@ function App() {
         <Typography variant="h5" component="h1" gutterBottom align="center">
           DC Sentencing Guidelines Calculator
         </Typography>
+        <Typography variant="body1" gutterBottom>
+          This calculator is designed to assist defense lawyers and other legal professionals in understanding the sentencing ranges based on the District of Columbia Sentencing and Criminal Code. It reflects the guidelines provided by the <a href="https://scdc.dc.gov/page/sentencing-guidelines-manual-sccrc" target="_blank" rel="noopener noreferrer">Sentencing Commission for the District of Columbia</a> for 2023.
+        </Typography>
         <Grid container spacing={2}>
           <Grid item xs={12} md={6}>
             <TextField
@@ -138,7 +141,6 @@ function App() {
               onClick={calculateSentence}
               fullWidth
               sx={{ mt: 2 }}
-              disabled={offenses.length === 0}
             >
               Calculate
             </Button>
