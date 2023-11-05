@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   TextField,
   Button,
@@ -24,6 +24,9 @@ function App() {
   const [searchTerm, setSearchTerm] = useState('');
   const [sentenceRange, setSentenceRange] = useState('');
   const [snackbarOpen, setSnackbarOpen] = useState(false);
+  useEffect(() => {
+    document.title = "DC Sentencing";
+  }, []); // The empty array causes this effect to only run on mount
 
   const handleSearchChange = (e) => {
     setSearchTerm(e.target.value);
