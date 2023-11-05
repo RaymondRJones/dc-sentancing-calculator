@@ -87,6 +87,18 @@ function App() {
         <Typography variant="body1" gutterBottom>
           This calculator is designed to assist defense lawyers and other legal professionals in understanding the sentencing ranges based on the District of Columbia Sentencing and Criminal Code. It reflects the guidelines provided by the <a href="https://scdc.dc.gov/page/sentencing-guidelines-manual-sccrc" target="_blank" rel="noopener noreferrer">Sentencing Commission for the District of Columbia</a> for 2023.
         </Typography>
+        <Typography variant="body2" gutterBottom>
+          <strong>How to Use the App:</strong>
+        </Typography>
+        <Typography variant="body2" gutterBottom>
+          1. On the left side, add all the charges the defendant has been convicted of. Note that only the most common offenses based on the DC chart are included.
+        </Typography>
+        <Typography variant="body2" gutterBottom>
+          2. On the right side, input the current offense. Ensure that it exactly matches the name of the offense as listed on the left side to avoid errors.
+        </Typography>
+        <Typography variant="body2" gutterBottom>
+          3. Press 'Calculate' to determine the criminal history score, the current offense category, and the recommended sentencing range.
+        </Typography>
         <Grid container spacing={2}>
           <Grid item xs={12} md={6}>
             <TextField
