@@ -1,43 +1,79 @@
 
-export const offense_and_criminal_score_to_months = {
-    // Group 1 offenses
-    "1st degree murder with armed": {
+export const group_and_criminal_score_to_months = {
+    "Group 1": {
       "0 to 0.5": "360 - 720",
       "0.75 to 1.75": "360 - 720",
       "2 to 3.75": "360 - 720",
       "4 to 5.75": "360 - 720",
       "6+": "360+"
     },
-    // Group 2 offenses (Only part of the data is shown for brevity)
-    "2nd degree murder with armed": {
-      // Assuming a typo in the score "1" should be "0 to 0.5" as in other examples
+    "Group 2": {
       "0 to 0.5": "144 - 288",
-      // ... other scores and their ranges
+      "0.75 to 1.75": "156 - 300",
+      "2 to 3.75": "168 - 312",
+      "4 to 5.75": "180 - 324",
+      "6+": "192+"
     },
-    "1st degree sex abuse": {
-      "0 to 0.5": "156 - 300",
-      // ... other scores and their ranges
+    "Group 3": {
+      "0 to 0.5": "90 - 180",
+      "0.75 to 1.75": "102 - 192",
+      "2 to 3.75": "114 - 204",
+      "4 to 5.75": "126 - 216",
+      "6+": "138+"
     },
-    // ... other offenses in Group 2
-    // Group 3 offenses
-    // ... offenses and their score ranges
-    // Group 4 offenses
-    "Aggravated assault with armed": {
+    "Group 4": {
       "0 to 0.5": "48 - 120",
       "0.75 to 1.75": "60 - 132",
       "2 to 3.75": "72 - 144",
       "4 to 5.75": "84 - 156",
       "6+": "96+"
     },
-    // ... other offenses in Group 4
-    // Group 5 offenses
-    // ... offenses and their score ranges
-    // Group 6 offenses
-    "ADW": {
-      "0 to 0.5": "18 - 60",
-      // ... other scores and their ranges
+    "Group 5": {
+      "0 to 0.5": "36 - 84",
+      "0.75 to 1.75": "48 - 96",
+      "2 to 3.75": "60 - 108",
+      "4 to 5.75": "72 - 120",
+      "6+": "84+"
     },
-    // ... other offenses in Group 6
+    "Group 6": {
+      "0 to 0.5": "18 - 60",
+      "0.75 to 1.75": "24 - 66",
+      "2 to 3.75": "30 - 72",
+      "4 to 5.75": "36 - 78",
+      "6+": "42+"
+    },
+    "Group 7": {
+      "0 to 0.5": "12 - 36",
+      "0.75 to 1.75": "18 - 42",
+      "2 to 3.75": "24 - 48",
+      "4 to 5.75": "30 - 54",
+      "6+": "36+"
+    },
+    "Group 8": {
+      "0 to 0.5": "6 - 24",
+      "0.75 to 1.75": "10 - 28",
+      "2 to 3.75": "14 - 32",
+      "4 to 5.75": "18 - 36",
+      "6+": "22+"
+    },
+    "Group 9": {
+      "0 to 0.5": "1 - 12",
+      "0.75 to 1.75": "3 - 16",
+      "2 to 3.75": "5 - 20",
+      "4 to 5.75": "7 - 24",
+      "6+": "9+"
+    }
+  };
+  export const groupToHistoryScore = {
+    "Group 1": 3,
+    "Group 2": 3,
+    "Group 3": 3,
+    "Group 4": 3,
+    "Group 5": 3,
+    "Group 6": 2,
+    "Group 7": 2,
+    "Group 8": 1,
+    "Group 9": 1
   };
   
   export const offenseToSeverityGroup = {
@@ -173,49 +209,5 @@ export const offense_and_criminal_score_to_months = {
     'Sexual abuse of a patient 2º, attempt': 9,
     'Sexual abuse of a ward 2º, attempt': 9,
     'Theft 2 º, if two or more Theft conviction': 9
-  };
-  
-// This represents a simplified version of the master grid. You would fill in the complete data.
-export const masterGrid = {
-    "Armed Robbery": {
-      severityGroup: "1",
-      offenseGroup: "Most Common Offense"
-      // Additional details as necessary
-    },
-    "Burglary 1o": {
-      severityGroup: "5",
-      offenseGroup: "Most Common Offense"
-      // Additional details as necessary
-    },
-    // ... other offenses
-  };
-  
-  // This represents the drug grid. Again, you would complete it with all necessary data.
-  export const drugGrid = {
-    "Distribution of Marijuana": {
-      severityGroup: "2",
-      drugGroup: "Most Common Drug Offense"
-      // Additional details as necessary
-    },
-    // ... other drug offenses
-  };
-  
-  // The criminal history score would be calculated based on rules in §2.2,
-  // which you would need to implement as a function that takes a defendant's history
-  // and returns a score. Here is a placeholder for such a function:
-  export const calculateCriminalHistoryScore = (defendantHistory) => {
-    // Implement the scoring logic as per §2.2
-    let score = 0;
-    // Example calculation - this will depend on your specific rules
-    score += defendantHistory.priorFelonyConvictions ? 1 : 0;
-    // ... other history factors
-    return score;
-  };
-  
-  // Severity groups could be a simple mapping or a more complex structure if needed
-  export const severityGroups = {
-    "1": { description: "Most Severe" },
-    "2": { description: "Severe" },
-    // ... other severity levels
   };
   
