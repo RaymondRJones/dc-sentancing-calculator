@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {
+  Select,
+  MenuItem,
   TextField,
   Button,
   Container,
@@ -137,7 +139,7 @@ function App() {
                 </ListItem>
               ))}
             </List>
-
+            {/*
             <TextField
               label="Current Offense"
               variant="outlined"
@@ -146,6 +148,26 @@ function App() {
               fullWidth
               margin="normal"
             />
+            */}
+                      <Select
+            label="Current Offense"
+            value={currentOffense}
+            onChange={(e) => setCurrentOffense(e.target.value)}
+            displayEmpty
+            fullWidth
+            margin="normal"
+            variant="outlined"
+          >
+            {/* */}
+            <MenuItem value="" disabled>
+              Select Current Offense
+            </MenuItem>
+            {filteredOffenses.map((offense) => (
+              <MenuItem key={offense} value={offense}>
+                {offense}
+              </MenuItem>
+            ))}
+          </Select>
             <Button
               startIcon={<CalculateIcon />}
               variant="contained"
